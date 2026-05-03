@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #effdf8;
+  --color-primary-100: #d7fbef;
+  --color-primary-200: #b4f4df;
+  --color-primary-300: #82e8c8;
+  --color-primary-400: #4fd3ad;
+  --color-primary-500: #2ab891;
+  --color-primary-600: #1d9475;
+  --color-primary-700: #1b765f;
+  --color-primary-800: #1a5e4e;
+  --color-primary-900: #184d42;
+  --font-sans: "Cairo", "Tajawal", sans-serif;
+}
+
+:root {
+  --app-bg: #0d1114;
+  --app-bg-soft: #11181d;
+  --app-card: #182024;
+  --app-card-elevated: #1d272c;
+  --app-sidebar: #11171b;
+  --app-border: rgba(148, 163, 184, 0.14);
+  --app-text: #edf5f2;
+  --app-muted: #93a3a3;
+  --app-faint: #647476;
+  --app-teal: #4fd3ad;
+  --app-blue: #74a9ff;
+  --app-gold: #e9c46a;
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(79, 211, 173, 0.35) transparent;
+  }
+
+  body {
+    @apply text-gray-100 antialiased font-sans;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(79, 211, 173, 0.11), transparent 28rem),
+      radial-gradient(circle at 82% 4%, rgba(116, 169, 255, 0.08), transparent 30rem),
+      linear-gradient(180deg, #0d1114 0%, #101619 48%, #0d1114 100%);
+    color: var(--app-text);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-500 text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition-all duration-200 active:scale-95 flex items-center justify-center gap-2;
+    box-shadow: 0 10px 28px rgba(42, 184, 145, 0.16);
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800/80 hover:bg-gray-700/80 text-gray-200 border border-gray-700 font-semibold py-2 px-4 rounded-lg shadow-sm transition-all duration-200 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-danger {
+    @apply bg-red-950/50 hover:bg-red-900/60 text-red-300 font-semibold py-2 px-4 rounded-lg transition-all duration-200 active:scale-95 flex items-center justify-center gap-2 border border-red-800/60;
+  }
+
+  .card {
+    background: linear-gradient(180deg, rgba(29, 39, 44, 0.96), rgba(24, 32, 36, 0.96));
+    border: 1px solid var(--app-border);
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
+    @apply rounded-xl overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all duration-200 text-gray-100 placeholder-gray-500;
+    background: #11191d;
+    border-color: rgba(148, 163, 184, 0.18);
+  }
+
+  .input-field:focus {
+    background: #142025;
+    border-color: rgba(79, 211, 173, 0.78);
+    --tw-ring-color: rgba(79, 211, 173, 0.16);
+  }
+
+  .label-text {
+    @apply block text-sm font-semibold mb-2;
+    color: var(--app-muted);
+  }
+
+  .page-shell {
+    @apply space-y-6 animate-[softFadeIn_220ms_ease-out];
+  }
+
+  .surface-panel {
+    background: linear-gradient(135deg, rgba(24, 77, 66, 0.28), rgba(29, 39, 44, 0.82));
+    border: 1px solid rgba(79, 211, 173, 0.16);
+    @apply rounded-xl;
+  }
+}
+
+@keyframes softFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
