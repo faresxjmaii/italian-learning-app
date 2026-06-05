@@ -7,6 +7,16 @@ pronunciation, notes and review sessions in one calm workspace. The app stores l
 locally in the browser with Dexie / IndexedDB, while optional AI and YouTube features run through
 server-side API routes so secrets are never exposed in the client.
 
+[Live app](https://italian-learning-app-mocha.vercel.app)
+
+## Screenshots
+
+![Il Mio Vocabolario Italiano desktop dashboard](screenshots/home-desktop.png)
+
+| Mobile dashboard | Verb study |
+| --- | --- |
+| ![Il Mio Vocabolario Italiano mobile dashboard](screenshots/home-mobile.png) | ![Il Mio Vocabolario Italiano verb study](screenshots/verbs.png) |
+
 ## Features
 
 - Dashboard: daily overview and quick access to study tools.
@@ -116,20 +126,6 @@ This app brings the core workflow into one local-first interface:
 - Release preparation with lint, build, tests and secret scanning.
 - Product thinking for a real learning workflow.
 
-## GitHub Metadata
-
-Suggested repository description:
-
-```text
-Local-first Italian learning web app built with React, Vite, Tailwind CSS and IndexedDB.
-```
-
-Suggested topics:
-
-```text
-react, vite, tailwindcss, indexeddb, dexie, italian-learning, vocabulary, language-learning, pomodoro, ai
-```
-
 ## Roadmap
 
 - Add full end-to-end tests for the most important user flows.
@@ -141,4 +137,4 @@ react, vite, tailwindcss, indexeddb, dexie, italian-learning, vocabulary, langua
 
 ## License
 
-Portfolio project. Add a license before public reuse if needed.
+No open-source license has been added. Review the terms of the optional OpenRouter, YouTube, translation, and font integrations before reuse.
